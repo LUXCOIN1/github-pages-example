@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LUM COIN - Galactic Innovation</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to bottom right, #2b0049, #6a0dad, #9d80cc);
+            color: #E6E6FA;
+            padding: 20px;
+            text-align: center;
+            background-image: url('https://www.transparenttextures.com/patterns/stardust.png');
+            position: relative;
+            min-height: 100vh;
+            overflow-y: scroll;
+        }
+        
+        /* Moon Element */
+        .moon {
+            width: 150px;
+            height: 150px;
+            background: radial-gradient(circle, #f0e68c, #f0e68c, #f6f1bf);
+            border-radius: 50%;
+            position: absolute;
+            top: 50px;
+            right: 50px;
+            box-shadow: 0px 0px 30px 5px rgba(255, 255, 220, 0.8);
+        }
+        .moon::before {
+            content: "";
+            width: 15px;
+            height: 15px;
+            background: rgba(200, 200, 180, 0.8);
+            position: absolute;
+            top: 40%;
+            left: 25%;
+            border-radius: 50%;
+        }
+        .moon::after {
+            content: "";
+            width: 25px;
+            height: 25px;
+            background: rgba(230, 230, 190, 0.7);
+            position: absolute;
+            top: 65%;
+            right: 20%;
+            border-radius: 50%;
+        }
+
+        header {
+            background-color: rgba(90, 0, 150, 0.9);
+            color: white;
+            padding: 35px;
+            width: 100%;
+            text-align: center;
+            border-radius: 20px;
+            box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.4);
+            margin-bottom: 30px;
+        }
+        h1 {
+            font-size: 4.5rem;
+            margin: 15px 0;
+            text-shadow: 3px 3px 12px rgba(0, 0, 0, 0.5);
+        }
+        p {
+            font-size: 1.6rem;
+            margin-bottom: 20px;
+        }
+        .social-links {
+            margin-top: 40px;
+        }
+        .social-links a {
+            display: inline-block;
+            margin: 10px;
+            padding: 16px 32px;
+            background-color: #6A0DAD;
+            color: white;
+            text-decoration: none;
+            border-radius: 14px;
+            font-weight: bold;
+            transition: background-color 0.3s ease, transform 0.3s;
+            box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.3);
+        }
+        .social-links a:hover {
+            background-color: #8A2BE2;
+            transform: translateY(-4px) scale(1.05);
+        }
+        .social-links a.facebook {
+            background-color: #3b5998;
+        }
+        .social-links a.facebook:hover {
+            background-color: #324b82;
+        }
+        .social-links a.youtube {
+            background-color: #FF0000;
+        }
+        .social-links a.youtube:hover {
+            background-color: #cc0000;
+        }
+        footer {
+            margin-top: 60px;
+            font-size: 1rem;
+            color: #E6E6FA;
+            text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.4);
+        }
+        .crypto-section {
+            margin-top: 50px;
+            background-color: rgba(75, 0, 130, 0.85);
+            padding: 25px;
+            border-radius: 16px;
+            color: white;
+            box-shadow: 0px 5px 18px rgba(0, 0, 0, 0.4);
+            max-width: 600px;
+            text-align: left;
+        }
+        .crypto-section p {
+            margin-bottom: 10px;
+            font-size: 1.4rem;
+        }
+        .wallet-address {
+            font-weight: bold;
+            font-size: 1.3rem;
+            background: #4b0082;
+            padding: 12px;
+            border-radius: 10px;
+            color: #E6E6FA;
+            display: inline-block;
+            margin-top: 10px;
+        }
+        .button-wrapper {
+            margin-top: 15px;
+        }
+        .donate-button {
+            background-color: #6A0DAD;
+            color: white;
+            border: none;
+            padding: 10px 24px;
+            font-size: 1.1rem;
+            border-radius: 8px;
+            cursor: pointer;
+            box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.3);
+            transition: transform 0.2s;
+        }
+        .donate-button:hover {
+            background-color: #8A2BE2;
+            transform: scale(1.05);
+        }
+        .feedback-section {
+            margin-top: 50px;
+            background-color: rgba(90, 0, 150, 0.9);
+            padding: 25px;
+            border-radius: 16px;
+            color: white;
+            box-shadow: 0px 5px 18px rgba(0, 0, 0, 0.4);
+            max-width: 600px;
+            text-align: center;
+        }
+        .feedback-section input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 8px;
+        }
+        .feedback-section button {
+            background-color: #6A0DAD;
+            color: white;
+            border: none;
+            padding: 10px 24px;
+            font-size: 1rem;
+            border-radius: 8px;
+            cursor: pointer;
+            box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.3);
+            transition: transform 0.2s;
+        }
+        .feedback-section button:hover {
+            background-color: #8A2BE2;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <div class="moon"></div>
+
+    <header>
+        <h1>Welcome to LUM COIN</h1>
+        <p>Explore the universe of innovation. Stay connected with us!</p>
+    </header>
+
+    <div class="social-links">
+        <a href="https://x.com/lumcoin" target="_blank">Visit Our X Page</a>
+        <a href="https://www.facebook.com/profile.php?id=61572568966998" target="_blank" class="facebook">Visit Our Facebook Page</a>
+        <a href="https://www.youtube.com/@LUMCOIN1" target="_blank" class="youtube">Visit Our YouTube Channel</a>
+    </div>
+
+    <div class="crypto-section">
+        <p>Support us with cryptocurrency donations:</p>
+        <p class="wallet-address">DbsYCdZJf5Q4juSRizphDkibs8u3n7ZRJcQKQ2U7QEV4</p>
+        <div class="button-wrapper">
+            <button class="donate-button" onclick="alert('Thank you for supporting us!')">Donate Now</button>
+        </div>
+    </div>
+
+    <div class="feedback-section">
+        <h2>We value your feedback!</h2>
+        <input type="text" id="commentBox" placeholder="Write your comment here...">
+        <button onclick="alert('Thank you for your feedback!')">Submit</button>
+    </div>
+
+    <footer>
+        <p>© 2025 LUM COIN. All rights reserved.</p>
+    </footer>
+</body>
+</html>
